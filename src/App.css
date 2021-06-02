@@ -1,38 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  /* outline: 1px solid red; */
+}
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  background: rgb(231, 85, 32);
+  margin-bottom: 50px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 400px) {
+  header {
+    font-size: 0.8rem;
+  }
+  .navbar {
+    flex-direction: column;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.head-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.head-title h1 {
+  text-align: center;
+  word-wrap: break-word;
+}
+.head-title button {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+}
+.head-title button i {
+  font-size: 25px;
+  color: #464647
+}
+.navbar {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar button {
+  padding: 5px;
+  margin: 3px 7px;
+  color: #16161b;
+  background: transparent;
+  border: 1px solid #16161b;
+  border-radius: 10px;
+  outline: none;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 1s background ease-out 0.1s;
+}
+.navbar button:hover {
+  background-color: #16161b;
+  color:rgb(231, 85, 32);
+  font-weight: 900;
+}
+.main-section {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: seashell;
+  padding: 10px 35px;
+}
+.foodCatalogue {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.img-container {
+  width: 150px;
+  height: 150px;
+  background: #16161b;
+  position: relative;
+  transform: rotate(15deg);
+  margin-bottom: 5px;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transform: rotate(-15deg);
+  transition: 2s all ease-out 0.2s;
+}
+.img-container img:hover {
+  transition: 2s all ease-out 0.2s;
+  animation: image 2s ease-out infinite 0.2s;
+}
+@keyframes image{
+  0% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+.img-container p {
+  font-size: 16px;
+  background:rgb(224, 131, 100);
+  color: #16161b;
+  padding: 5px;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(130px, 20px) rotate(-15deg);
+}
+.text {
+  width: 100%;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.text h3 {
+  word-wrap: break-word;
+  text-align: center;
+  font-size: 16px;
+}
+.text button {
+  width: 60px;
+  height: 40px;
+  background: rgb(224, 131, 100);
+  color: #16161b;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 2s color ease-out 0.3s;
+}
+.text button:hover {
+  transition: 2s color ease-out 0.3s;
+  background: rgb(231, 85, 32);
+}
+.price-buy {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+.price-buy button {
+  width: 80px;
+  height: 40px;
+  background-color: rgb(224, 131, 100);
   color: white;
+  outline: none;
+  border: none;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.price-buy button:hover {
+  transition: 2s color ease-out 0.3s;
+  background: rgb(231, 85, 32);
 }
