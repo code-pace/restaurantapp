@@ -4,7 +4,7 @@ import Header from './components/Header';
 import MealBody from './components/MealBody';
 import FoodMenu from "./components/FoodMenu";
 import Checkout from "./components/Checkout";
-import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
+import {HashRouter as Router, Route, Switch, Link} from "react-router-dom";
 const allCategories = ["All",...new Set(FoodMenu.map(foodlist => foodlist.category))];
 console.log(allCategories)
 
